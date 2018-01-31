@@ -13,13 +13,14 @@ function init() {
     }
 
     gl.clearColor( 1.0, 0.0, 1.0, 1.0 );
-    cone = Cone(
+    cone = Cone(gl, 100);
     
     render();
 }
 
 function render() {
     gl.clear( gl.COLOR_BUFFER_BIT );
+    cone.render();
 }
 
 window.onload = init;
