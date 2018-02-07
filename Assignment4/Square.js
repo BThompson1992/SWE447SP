@@ -36,7 +36,8 @@ function Square(gl, vertexShaderId, fragmentShaderId) {
 		numComponents : 3 
 	};
     this.indices = {
-    values : new Uint16Array([ 0, 1, 3, 2 ])
+	    //index to vertices
+    values : new Uint16Array([ 0, 1, 2, 0, 2, 3 ])
     };
 	
 	// positions
@@ -77,7 +78,7 @@ function Square(gl, vertexShaderId, fragmentShaderId) {
 		var start = 0;
 		var count = this.count;
 		//gl.drawArrays(gl.TRIANGLE_STRIP, start, count); // TRIANGLE_STRIP
-		gl.drawElements(gl.TRIANGLE_STRIP, this.indices.values.length, gl.UNSIGNED_SHORT, 0);
+		gl.drawElements(gl.TRIANGLES, this.indices.values.length, gl.UNSIGNED_SHORT, 0);
 
 
 	};
