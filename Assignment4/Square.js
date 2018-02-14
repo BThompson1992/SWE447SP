@@ -134,6 +134,7 @@ function Square(gl, vertexShaderId, fragmentShaderId) {
 		var start = 0;
 		var count = this.count;
 		//gl.drawArrays(gl.TRIANGLE_STRIP, start, count); // TRIANGLE_STRIP
+		console.log(this.indices.values.length);
 		gl.drawElements(gl.TRIANGLES, this.indices.values.length, gl.UNSIGNED_SHORT, 0);
 
 
