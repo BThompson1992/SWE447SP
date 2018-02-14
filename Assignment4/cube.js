@@ -2,7 +2,6 @@
 var cube = undefined;
 var gl = undefined;
 var angle = 0;
-var viewMatrix;
 
 function init() {
   var canvas = document.getElementById( "webgl-canvas" );
@@ -19,7 +18,7 @@ function init() {
 
   cube = new Cube();
 
-  viewMatrix = lookat([2, 7, 6], [0, 0, 0], [0, 1, 0]);
+  cube.view = lookat([2, 7, 6], [0, 0, 0], [0, 1, 0]);
   
   render();
 }
