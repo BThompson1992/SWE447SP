@@ -18,7 +18,7 @@ function init() {
 
   cube = new Cube();
 
-  cube.view = lookat([2, 7, 6], [0, 0, 0], [0, 1, 0]);
+  cube.view = lookat([0, 1, -5], [0, 0, 0], [0, 1, 0]);
   
   render();
 }
