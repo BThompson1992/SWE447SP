@@ -19,7 +19,7 @@ uniform mat4 nView;
 void main()
 {
     gl_PointSize = 5.0;
-    gl_Position = MV * vPosition;
+    gl_Position = nView * MV * vPosition;
 }
 </script>
 
