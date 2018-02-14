@@ -54,12 +54,12 @@ function Cube( vertexShaderId, fragmentShaderId ) {
     
     this.indices = { 
         values : new Uint16Array([
-                  	       0, 1, 2, 0, 2, 3,        //Front Face
-			       4, 5, 6, 4, 6, 7,        //Back Face
-			       8, 9, 10, 8, 10, 11,     //Top Face 
-			       12, 13, 14, 12, 14, 15,  //Bottom Face
-			       16, 17, 18, 16, 18, 19,  //Left Face
-			       20, 21, 22, 20, 22, 23   //Right Face
+                  	       0, 1, 2, 0, 3, 2,        //Front Face
+			       4, 5, 6, 4, 7, 6,        //Back Face
+			       8, 9, 10, 8, 11, 10,     //Top Face 
+			       12, 13, 14, 12, 15, 14,  //Bottom Face
+			       16, 17, 18, 16, 19, 18,  //Left Face
+			       20, 21, 22, 20, 23, 22   //Right Face
         ])
     };
     this.indices.count = this.indices.values.length;
