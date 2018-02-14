@@ -28,15 +28,15 @@ function Square(gl, vertexShaderId, fragmentShaderId) {
 		    1.0, 1.0, -1.0, // Vertex 6
 		    -1.0, 1.0, 1.0, // Vertex 7
 			// Top face
-		    1.0, -1.0, -1.0, // Vertex 8
+		    1.0, 1.0, 1.0, // Vertex 8
 		    1.0, 1.0, -1.0, // Vertex 9
-		    1.0, 1.0, 1.0, // Vertex 10
-		    1.0, -1.0, 1.0, // Vertex 11
+		   -1.0, 1.0, 1.0, // Vertex 10
+		   -1.0, 1.0, -1.0, // Vertex 11
 			// Bottom face
-		    -1.0, 1.0, 1.0, // Vertex 12
-		    -1.0, -1.0, 1.0, // Vertex 13
-		    -1.0, -1.0, -1.0, // Vertex 14
-		    -1.0, 1.0, -1.0, // Vertex 15
+		    -1.0, -1.0, 1.0, // Vertex 12
+		    -1.0, -1.0,- 1.0, // Vertex 13
+		     1.0, -1.0, -1.0, // Vertex 14
+		     1.0, -1.0, 1.0, // Vertex 15
 			// Left face
 		    -1.0, -1.0, 1.0, // Vertex 16
 		    -1.0, -1.0, -1.0, // Vertex 17
