@@ -77,9 +77,11 @@ function Cube( vertexShaderId, fragmentShaderId ) {
     gl.enableVertexAttribArray( this.positions.attributeLoc );
 
     MVLoc = gl.getUniformLocation( this.program, "MV" );
-
+    ViewLoc = gl.getUniformLocation( this.program, "nView" );
+	
     this.MV = undefined;
-
+    this.view = undefined;
+	
     this.render = function () {
         gl.useProgram( this.program );
 
@@ -90,6 +92,7 @@ function Cube( vertexShaderId, fragmentShaderId ) {
         gl.bindBuffer( gl.ELEMENT_ARRAY_BUFFER, this.indices.buffer );
 
         gl.uniformMatrix4fv( MVLoc, gl.FALSE, flatten(this.MV) );
+	gl.uniformMatrix4fv( ViewLoc, gl.FALSE, flatten(this.view) );
 
         // Draw the cube's base
         gl.drawElements( gl.TRIANGLES, this.indices.count, gl.UNSIGNED_SHORT, 0 );
