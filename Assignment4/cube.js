@@ -18,6 +18,8 @@ function init() {
 
   cube = new Cube();
 
+  cube.MV = lookat([0, 7, 6], [0, 0, 0], [0, 1, 0]);
+  
   render();
 }
 
@@ -26,7 +28,7 @@ function render() {
 
   angle += 2.0; // degrees
 
-  cube.MV = rotate( angle, [1, 1, 0] );
+  cube.MV = mult(cube.MV, rotate( angle, [1, 1, 0] ));
 
   cube.render();
 
