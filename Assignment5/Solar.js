@@ -161,8 +161,8 @@ function render() {
   // system (and hence, has no translation to its location).
 
   ms.push();
-  ms.rotate(time/data.year, [0, 1.0, 0]);
-  ms.translate(data.distance*4, 0, 0);
+  ms.rotate(time/data.year, [1.0, 0, 0]);
+  ms.translate(data.distance*5, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -189,7 +189,7 @@ function render() {
   // system (and hence, has no translation to its location).
 
   ms.push();
-  ms.rotate(time/data.year, [0, 1.0, 0]);
+  ms.rotate(time/data.year, [1.0, 0, 0]);
   ms.translate(data.distance*5, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
@@ -217,7 +217,7 @@ function render() {
   // system (and hence, has no translation to its location).
 
   ms.push();
-  ms.rotate(time/data.year, [0, 1.0, 0]);
+  ms.rotate(time/data.year, [1.0, 0, 0]);
   ms.translate(data.distance*5, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
@@ -245,7 +245,7 @@ function render() {
   // system (and hence, has no translation to its location).
 
   ms.push();
-  ms.rotate(time/data.year, [0, 1.0, 0]);
+  ms.rotate(time/data.year, [1.0, 0, 0]);
   ms.translate(data.distance*5, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
@@ -273,7 +273,7 @@ function render() {
   // system (and hence, has no translation to its location).
 
   ms.push();
-  ms.rotate(time/data.year, [0, 1.0, 0]);
+  ms.rotate(time/data.year, [1.0, 0, 0]);
   ms.translate(data.distance*5, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
@@ -301,7 +301,7 @@ function render() {
   // system (and hence, has no translation to its location).
 
   ms.push();
-  ms.rotate(time/data.year, [0, 1.0, 0]);
+  ms.rotate(time/data.year, [1.0, 0, 0]);
   ms.translate(data.distance*5, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
@@ -329,7 +329,7 @@ function render() {
   // system (and hence, has no translation to its location).
 
   ms.push();
-  ms.rotate(time/data.year, [0, 1.0, 0]);
+  ms.rotate(time/data.year, [1.0, 0, 0]);
   ms.translate(data.distance*5, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
@@ -357,7 +357,7 @@ function render() {
   // system (and hence, has no translation to its location).
 
   ms.push();
-  ms.rotate(time/data.year, [0, 1.0, 0]);
+  ms.rotate(time/data.year, [1.0, 0, 0]);
   ms.translate(data.distance*5, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
@@ -385,7 +385,7 @@ function render() {
   // system (and hence, has no translation to its location).
 
   ms.push();
-  ms.rotate(time/data.year, [0, 1.0, 0]);
+  ms.rotate(time/data.year, [1.0, 0, 0]);
   ms.translate(data.distance*5, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
