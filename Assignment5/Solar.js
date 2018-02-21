@@ -18,7 +18,7 @@ var gl;
 
 var Planets = {
   Sun : undefined,
-  // Mercury : undefined,
+  Mercury : undefined,
   // Venus : undefined,
   // Earth : undefined,
   // Moon : undefined,
@@ -143,6 +143,35 @@ function render() {
   planet.render();
   ms.pop();
 
+  name = "Mercury";
+  planet = Planets[name];
+  data = SolarSystem[name];
+  
+  // Set PointMode to true to render all the vertices as points, as
+  // compared to filled triangles.  This can be useful if you think
+  // your planet might be inside another planet or the Sun.  Since the
+  // "planet" variable is set for each object, you will need to set this
+  // for each planet separately.
+
+  planet.PointMode = false;
+
+  // Use the matrix stack to configure and render a planet.  How you rener
+  // each planet will be similar, but not exactly the same.  In particular,
+  // here, we're only rendering the Sun, which is the center of the Solar
+  // system (and hence, has no translation to its location).
+
+  ms.push();
+  ms.rotate(time/data.year, axis);
+  ms.translate(data.distance, 0, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+
+  
   //
   //  Add your code for more planets here!
   //
