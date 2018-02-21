@@ -162,7 +162,7 @@ function render() {
 
   ms.push();
   ms.rotate(time/data.year, [0, 1.0, 0]);
-  ms.translate(data.distance*2, 0, 0);
+  ms.translate(data.distance*4, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -190,7 +190,7 @@ function render() {
 
   ms.push();
   ms.rotate(time/data.year, [0, 1.0, 0]);
-  ms.translate(data.distance*2, 0, 0);
+  ms.translate(data.distance*4, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -218,7 +218,7 @@ function render() {
 
   ms.push();
   ms.rotate(time/data.year, [0, 1.0, 0]);
-  ms.translate(data.distance*2, 0, 0);
+  ms.translate(data.distance*4, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -246,7 +246,7 @@ function render() {
 
   ms.push();
   ms.rotate(time/data.year, [0, 1.0, 0]);
-  ms.translate(data.distance*2, 0, 0);
+  ms.translate(data.distance*4, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -274,7 +274,7 @@ function render() {
 
   ms.push();
   ms.rotate(time/data.year, [0, 1.0, 0]);
-  ms.translate(data.distance*2, 0, 0);
+  ms.translate(data.distance*4, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -302,7 +302,7 @@ function render() {
 
   ms.push();
   ms.rotate(time/data.year, [0, 1.0, 0]);
-  ms.translate(data.distance*2, 0, 0);
+  ms.translate(data.distance*4, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -330,7 +330,7 @@ function render() {
 
   ms.push();
   ms.rotate(time/data.year, [0, 1.0, 0]);
-  ms.translate(data.distance*2, 0, 0);
+  ms.translate(data.distance*4, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -358,7 +358,7 @@ function render() {
 
   ms.push();
   ms.rotate(time/data.year, [0, 1.0, 0]);
-  ms.translate(data.distance*2, 0, 0);
+  ms.translate(data.distance*4, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -386,7 +386,7 @@ function render() {
 
   ms.push();
   ms.rotate(time/data.year, [0, 1.0, 0]);
-  ms.translate(data.distance*2, 0, 0);
+  ms.translate(data.distance*4, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
