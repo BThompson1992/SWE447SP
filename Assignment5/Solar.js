@@ -161,7 +161,7 @@ function render() {
   // system (and hence, has no translation to its location).
 
   ms.push();
-  ms.rotate(time/data.year, axis);
+  ms.rotate(time/data.year, [0, 1.0, 0]);
   ms.translate(data.distance, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
