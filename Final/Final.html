@@ -25,6 +25,18 @@
       scene.add( cube );
       
       camera.position.z = 5;
+      
+      var listener = new THREE.AudioListener();
+      camera.add(listener);
+      
+      var = new THREE.Audio(listener)
+      
+      var audioLoader = new THREE.AudioLoader();
+      audioLoader.load( /**audio file here**/, function ( buffer ) {
+        sound.setBuffer(buffer);
+        sound.setLoop(true);
+        sound.setVolume(0.5);
+        sound.play();
     </script>
   </body>
 </html>
