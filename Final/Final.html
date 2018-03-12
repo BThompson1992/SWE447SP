@@ -19,6 +19,10 @@
       renderer.setSize(window.innerWidth, window.innerHeight );
       document.body.appendChild( renderer.domElement );
       
+      var renderer = new THREE.WevGLRenderer();
+      renderer.setSize( window.innerWidth, window.innerHeight );
+      document.body.appendChild(renderer.domElement);
+      
       var geometry = new THREE.BoxGeometry(1, 1, 1);
       var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
       var cube = new THREE.Mesh( geometry, material );
@@ -26,17 +30,32 @@
       
       camera.position.z = 5;
       
+      var animate = function(){
+        requestAnimationFrame(animate);
+        
+        
+        renderer.render(scene, camera);
+      };
+      
       var listener = new THREE.AudioListener();
       camera.add(listener);
       
-      var = new THREE.Audio(listener)
+      var sound = new THREE.Audio(listener)
       
       var audioLoader = new THREE.AudioLoader();
-      audioLoader.load( /**audio file here**/, function ( buffer ) {
+      audioLoader.load( 'Alice.mp3', function ( buffer ) {
         sound.setBuffer(buffer);
         sound.setLoop(true);
         sound.setVolume(0.5);
         sound.play();
+      }
+      );
+      
+      var analyser = new THREE.AudioAnalyser(sound, 32);
+      
+      var data = analyser.getAverageFrequency();
+      
+      animate();
     </script>
   </body>
 </html>
