@@ -13,7 +13,5 @@ function rect(){
   
 }
 
-rect.prototype.resize(){
+rect.prototype.resize();
  
-  
-}
