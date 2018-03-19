@@ -10,6 +10,7 @@
   </head>
   <body bgcolor = "#FFFFFF">
     <script src = "../Common/Final/three.js"></script>
+    <script src = "../Common/Final/rects.js"></script>
     <script>
       
       var scene = new THREE.Scene();
@@ -19,9 +20,6 @@
       renderer.setSize(window.innerWidth, window.innerHeight );
       document.body.appendChild( renderer.domElement );
       
-      var geometry = new THREE.BoxGeometry(1, 1, 1);
-      var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-      var cube = new THREE.Mesh( geometry, material );
       scene.add( cube );
       
       camera.position.z = 5;
@@ -33,10 +31,10 @@
         renderer.render(scene, camera);
       };
       
-      /*var listener = new THREE.AudioListener();
+      var listener = new THREE.AudioListener();
       camera.add(listener);
       
-      var sound = new THREE.Audio(listener)
+      var sound = new THREE.Audio(listener);
       
       var audioLoader = new THREE.AudioLoader();
       audioLoader.load( 'Alice.mp3', function ( buffer ) {
@@ -56,9 +54,11 @@
       for(i = 0; i < 15; i++){
         
         hurts.push(new rect());
-        hurts[i].Xpos = i * 5; 
+        hurts[i].Xpos = i * 5;
+        
+        scene.add( hurts[i].cube )
       }
-      */
+      
       
       animate();
     </script>
