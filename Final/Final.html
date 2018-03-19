@@ -55,6 +55,15 @@
       
       var data = analyser.getAverageFrequency();
       
+      var hurts = [];
+      
+      for(i = 0; i < 15; i++){
+        
+        hurts.push(new rect());
+        hurts[i].Xpos = i * 5; 
+      }
+      
+      
       animate();
     </script>
   </body>
