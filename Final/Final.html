@@ -52,7 +52,7 @@
       for(i = 0; i < 15; i++){
         
         hurts.push(new rect());
-        hurts[i].Xpos = i * 50;
+        hurts[i].cube.translate(i * 5, 0, 0);
         
         scene.add( hurts[i].cube )
       }
