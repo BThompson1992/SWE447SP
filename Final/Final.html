@@ -52,7 +52,7 @@
       for(i = 0; i < 15; i++){
         
         hurts.push(new rect());
-        hurts[i].cube.translate(i * 5, 0, 0);
+        hurts[i].cube.geometry.translate(i * 5, 0, 0);
         
         scene.add( hurts[i].cube )
       }
