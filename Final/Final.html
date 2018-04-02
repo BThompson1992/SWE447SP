@@ -25,8 +25,17 @@
       function animate() {
         requestAnimationFrame(animate);
         
+        analyser.getFrequencyData();
         
         renderer.render(scene, camera);
+      };
+      
+      function analyserUpdate(){
+        
+        for(i = 0; i < 15; i++){
+          
+          hurts[i].cube.geometry.height = analyser.data[i];
+        }
       };
       
       var listener = new THREE.AudioListener();
@@ -45,6 +54,8 @@
       
       var analyser = new THREE.AudioAnalyser(sound, 32);
       
+      analyser.frequencyBinCount = 15;
+      
       var data = analyser.getAverageFrequency();
       
       var hurts = [];
@@ -52,7 +63,7 @@
       for(i = 0; i < 15; i++){
         
         hurts.push(new rect());
-        hurts[i].cube.geometry.translate(i * 50, 0, 0);
+        hurts[i].cube.geometry.translate(i * 2, 0, 0);
         
         scene.add( hurts[i].cube )
       }
