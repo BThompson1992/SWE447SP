@@ -10,7 +10,7 @@ function rect(){
   
 }
 
-rect.prototype.resize(height);/*{
+rect.prototype.resize(height){
  
-//this.cube.geometry.scale(1, height, 1);
-};*/
+this.cube.geometry.scale(1, height, 1);
+};
