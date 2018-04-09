@@ -26,19 +26,19 @@
       function animate() {
         requestAnimationFrame(animate);
         
-       //analyser.getFrequencyData();
-       // analyserUpdate(analyser.data)
+       analyser.getFrequencyData();
+       analyserUpdate(analyser.data)
         
         renderer.render(scene, camera);
       };
       
-     /*function analyserUpdate(a_Data){
+     function analyserUpdate(a_Data){
         
         for(i = 0; i < 15; i++){
           
           hurts[i].resize(a_Data[i]);
         }
-      };*/
+      };
       
       var listener = new THREE.AudioListener();
       camera.add(listener);
@@ -58,15 +58,12 @@
       
       analyser.frequencyBinCount = 15;
       
-      var data = analyser.getAverageFrequency();
-      
       var hurts = [];
       
       for(i = 0; i < 15; i++){
         
         hurts.push(new rect());
         hurts[i].cube.geometry.translate(i * 2, 0, 0);
-        //hurts[i].resize(a_Data[i]);
         
         scene.add( hurts[i].cube )
       }
