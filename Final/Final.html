@@ -27,15 +27,16 @@
         requestAnimationFrame(animate);
         
         analyser.getFrequencyData();
+        analyserUpdate(analyser.data)
         
         renderer.render(scene, camera);
       };
       
-     function analyserUpdate(){
+     function analyserUpdate(a_Data){
         
         for(i = 0; i < 15; i++){
           
-          hurts[i].resize(analyser.data[i]);
+          hurts[i].resize(a_Data[i]);
         }
       };
       
