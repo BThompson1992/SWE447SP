@@ -31,13 +31,13 @@
         renderer.render(scene, camera);
       };
       
-     /* function analyserUpdate(){
+     function analyserUpdate(){
         
         for(i = 0; i < 15; i++){
           
-          hurts[i].resize();
+          hurts[i].resize(analyser.data[i]);
         }
-      };*/
+      };
       
       var listener = new THREE.AudioListener();
       camera.add(listener);
