@@ -10,7 +10,7 @@ function rect(){
   
 }
 
-rect.prototype.resize = function(height){
+rect.prototype.resize = function(height);
  
 this.cube.geometry.parameters.height = height;
-};
+
