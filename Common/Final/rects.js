@@ -12,6 +12,6 @@ function rect(){
 
 rect.prototype.resize = function(height) {
  
-this.cube.scale.y = height;
+this.cube.scale.y = height - 100;
 
 };
