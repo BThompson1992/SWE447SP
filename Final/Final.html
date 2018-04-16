@@ -40,6 +40,8 @@
           
           hurts[i].cube.geometry.verticesNeedUpdate = true;
           hurts[i].resize(a_Data[i]);
+          
+          console.log(i);
         }
       };
       
@@ -67,7 +69,6 @@
         
         hurts.push(new rect());
         hurts[i].cube.geometry.translate(i * 2, 0, 0);
-        console.log(i)
         scene.add( hurts[i].cube )
       }
      
