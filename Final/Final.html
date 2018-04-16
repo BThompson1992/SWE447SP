@@ -23,6 +23,8 @@
       camera.position.z = 100;
       camera.position.x = 15;
       
+      var numOfCubes = 30;
+      
       function animate() {
         requestAnimationFrame(animate);
         
@@ -36,7 +38,7 @@
         
        console.log("Update Called");
        
-        for(i = 0; i < 15; i++){
+        for(i = 0; i < numOfCubes; i++){
           
           hurts[i].cube.geometry.verticesNeedUpdate = true;
           hurts[i].resize(a_Data[i]);
@@ -59,11 +61,11 @@
       
       var analyser = new THREE.AudioAnalyser(sound, 32);
       
-      analyser.frequencyBinCount = 30;
+      analyser.frequencyBinCount = numOfCubes;
       
       var hurts = [];
       
-      for(i = 0; i < 30; i++){
+      for(i = 0; i < numOfCubes; i++){
         
         hurts.push(new rect());
         hurts[i].cube.geometry.translate(i * 2, 0, 0);
