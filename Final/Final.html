@@ -24,6 +24,25 @@
       camera.position.x = 15;
       
       var numOfCubes = 30;
+      var songs = [
+          "01 - City Under Sky (Intro).mp3",
+          "02 - Grim Reaper (feat. Matty M.).mp3",
+          "03 - Hand in Hand (Vocals).mp3",
+          "04 - Machine Paradigm.mp3",
+          "05 - Catch my Dragon.mp3",
+          "06 - Before The Storm.mp3",
+          "07 - Ninja Soul.mp3",
+          "08 - Warp.mp3",
+          "09 - Christmas Song.mp3",
+          "10 - Red Flower.mp3",
+          "11 - Dancing With Wolves.mp3",
+          "12 - Dreamfall.mp3",
+          "13 - Stepfather (Vocals).mp3",
+          "14 - Red Flower (Acoustic).mp3",
+          "15 - Hand in Hand (Instrumental).mp3",
+          "Alice.mp3"];
+      
+      var songIndex = 0;
       
       function animate() {
         requestAnimationFrame(animate);
@@ -51,13 +70,25 @@
       var sound = new THREE.Audio(listener);
       
       var audioLoader = new THREE.AudioLoader();
-      audioLoader.load( '04 - Machine Paradigm.mp3', function ( buffer ) {
+      audioLoader.load( songs[songIndex], function ( buffer ) {
         sound.setBuffer(buffer);
         sound.setLoop(true);
         sound.setVolume(0.5);
         sound.play();
       }
       );
+      
+      function onDocumentMouseClick( event ) {
+				
+        songIndex += 1;
+        audioLoader.load( songs[songIndex], function ( buffer ) {
+          sound.setBuffer(buffer);
+          sound.setLoop(true);
+          sound.setVolume(0.5);
+          sound.play();
+           }
+        );
+			}
       
       var analyser = new THREE.AudioAnalyser(sound, 64);
       
